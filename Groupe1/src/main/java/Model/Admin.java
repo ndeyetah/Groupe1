@@ -13,7 +13,7 @@ public class Admin {
      private String Prenom;
       private String Nom;
        private String Login;
-        private String password;
+        private String Password;
 
     public int getID() {
         return ID;
@@ -44,7 +44,7 @@ public class Admin {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.Password = password;
     }
 
     public String getLogin() {
@@ -52,14 +52,14 @@ public class Admin {
     }
 
     public String getPassword() {
-        return password;
+        return Password;
     }
 
     public Admin(String Prenom, String Nom, String Login, String password) {
         this.Prenom = Prenom;
         this.Nom = Nom;
         this.Login = Login;
-        this.password = password;
+        this.Password = password;
     }
 
     public Admin(int ID, String Prenom, String Nom, String Login, String password) {
@@ -67,7 +67,7 @@ public class Admin {
         this.Prenom = Prenom;
         this.Nom = Nom;
         this.Login = Login;
-        this.password = password;
+        this.Password = password;
     }
 
     public Admin() {
