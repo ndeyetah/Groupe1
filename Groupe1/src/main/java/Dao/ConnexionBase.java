@@ -27,7 +27,7 @@ public class ConnexionBase {
         }
         try {
             //2.SELECTION DE LA BASE DE DONNEES
-         co=   DriverManager.getConnection("jdbc:mysql://localhost/groupe&","root","");
+         co=   DriverManager.getConnection("jdbc:mysql://localhost/groupe1","root","");
         } catch (SQLException ex) {
             Logger.getLogger(ConnexionBase.class.getName()).log(Level.SEVERE, null, ex);
         }

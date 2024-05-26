@@ -49,7 +49,11 @@ cb.st.executeUpdate(rep);
             }
 //Supprimer
 
-         public void Admin_DEl (Admin A){
+    /**
+     *
+     * @param ID
+     */
+    public void Admin_D(int ID){
                 
            try {
             ConnexionBase cb=new ConnexionBase();
@@ -65,5 +69,7 @@ cb.st.executeUpdate(rep);
             Logger.getLogger(Admin_Action.class.getName()).log(Level.SEVERE, null, ex);
         }
             }
+
+   
             
          }

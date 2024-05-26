@@ -4,6 +4,10 @@
  */
 package View;
 
+import Controleur.Admin_Action;
+import Model.Admin;
+import static javax.swing.text.html.parser.DTDConstants.ID;
+
 /**
  *
  * @author HP
@@ -73,6 +77,11 @@ public class AdminForm extends javax.swing.JFrame {
         });
 
         jButton3.setText("Supprimer");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -127,7 +136,7 @@ public class AdminForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
@@ -143,12 +152,33 @@ public class AdminForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+String Prenom=jTextField2.getText();
+            String Nom=jTextField3.getText();
+            String Login=jTextField4.getText();
+            String Password=jTextField5.getText();
+            Admin  a=new Admin(Prenom,Nom,Login,Password);
+            Admin_Action AA=new Admin_Action();
+            AA.Admin_add(a);
+            jTextField2.setText("");
+          jTextField3.setText("");
+            jTextField4.setText("");
+              jTextField5.setText("");
+           
+                    // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        // TODO add your handling code here:
+        int id=Integer.parseInt(jTextField1.getText());
+        Admin_Action AA=new Admin_Action();
+        AA.Admin_D(ID);
+        jTextField1.setText("");
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
